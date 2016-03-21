@@ -15,6 +15,7 @@
  */
 package org.commonjava.maven.cartographer.ftest;
 
+import org.commonjava.maven.atlas.graph.spi.RelationshipGraphConnectionFactory;
 import org.commonjava.maven.atlas.graph.spi.neo4j.FileNeo4jConnectionFactory;
 import org.commonjava.cartographer.Cartographer;
 import org.commonjava.cartographer.CartographerCoreBuilder;
@@ -39,7 +40,7 @@ public class StandaloneTCKDriver
 
     private Cartographer carto;
 
-    private FileNeo4jConnectionFactory connectionFactory;
+    private RelationshipGraphConnectionFactory connectionFactory;
 
     @Override
     public Cartographer start( final TemporaryFolder temp )

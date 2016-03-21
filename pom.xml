@@ -42,7 +42,7 @@
   
   <properties>
     <projectOwner>Red Hat, Inc.</projectOwner>
-    <atlasVersion>0.16.0</atlasVersion>
+    <atlasVersion>0.16.1-SNAPSHOT</atlasVersion>
     <galleyVersion>0.11.4-SNAPSHOT</galleyVersion>
     <javaVersion>1.8</javaVersion>
   </properties>
@@ -50,6 +50,7 @@
   <modules>
     <module>model-java</module>
     <module>api</module>
+    <module>db</module>
     <module>cartographer</module>
     <module>spi</module>
     <module>tck</module>
@@ -78,6 +79,11 @@
         <artifactId>cartographer-api</artifactId>
         <version>0.10.4-SNAPSHOT</version>
       </dependency>
+      <dependency>
+        <groupId>org.commonjava.maven.cartographer</groupId>
+        <artifactId>cartographer-db-api</artifactId>
+        <version>0.10.4-SNAPSHOT</version>
+      </dependency>
 
       <dependency>
         <groupId>org.commonjava.maven.cartographer</groupId>
@@ -94,6 +100,11 @@
       <dependency>
         <groupId>org.commonjava.maven.cartographer</groupId>
         <artifactId>cartographer-tck</artifactId>
+        <version>0.10.4-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.commonjava.maven.cartographer</groupId>
+        <artifactId>cartographer-db-tck</artifactId>
         <version>0.10.4-SNAPSHOT</version>
       </dependency>
 
@@ -203,6 +214,12 @@
         <artifactId>weld-se</artifactId>
         <version>1.1.8.Final</version>
         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.tinkerpop</groupId>
+        <artifactId>gremlin-core</artifactId>
+        <version>3.0.1-incubating</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
